@@ -1,385 +1,356 @@
+<div align="center">
+
 # 🏆 NOTIFY
 
-### _Never Miss Another Contest - The Ultimate CP Enthusiast's Companion_
+### _Never Miss Another Contest — The Ultimate CP Enthusiast's Companion_
 
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-notify--snowy.vercel.app-6C63FF?style=for-the-badge)](https://notify-snowy.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
 
----
-
-## 🎯 **The Problem Solver for Competitive Programmers**
-
-Missing contest notifications? Losing track of CodeChef, Codeforces, and LeetCode competitions? **Notify** is the game-changing Progressive Web App designed specifically for competitive programming enthusiasts who want to stay ahead of every contest.
+<br/>
 
 > _"In competitive programming, timing is everything. Notify ensures you never miss your shot at glory."_
 
----
+**[🚀 Try Live Demo](https://notify-snowy.vercel.app/)** · **[📱 Install as PWA](https://notify-snowy.vercel.app/sign-in)** · **[🐛 Report a Bug](https://github.com/Himaanshuuuu04/Notify/issues)** · **[✨ Request a Feature](https://github.com/Himaanshuuuu04/Notify/issues)**
 
-## 🚀 **Why CP Champions Choose Notify**
-
-### 🏅 **Competitive Programming Focused**
-
-- **🎯 Multi-Platform Contest Tracking** - CodeChef, Codeforces, LeetCode, and expanding
-- **⏰ Smart Reminder System** - Personalized notifications based on your preferences
-- **📱 Progressive Web App** - Install once, access everywhere - mobile, desktop, offline
-- **🔔 Intelligent Notifications** - Get reminded exactly when you want, how you want
-- **⚡ Real-Time Contest Updates** - Live contest schedules and last-minute changes
-- **🎨 CP-Themed Interface** - Built by programmers, for programmers
-
-### 💼 **Technical Excellence**
-
-- ✅ **Lightning-fast performance** with Next.js optimization
-- ✅ **Offline-first approach** with PWA capabilities
-- ✅ **Scalable architecture** handling thousands of users
-- ✅ **99.9% uptime** with automated cron job monitoring
-- ✅ **Cross-platform compatibility** - works everywhere
+</div>
 
 ---
 
-## 🙏 **Special Thanks**
+## 📖 Table of Contents
 
-A huge shoutout to [Tashif Khan](https://github.com/Tashifkhan) for generously providing the APIs powering contest data fetching and enabling features like stalking your friends' LeetCode and Codeforces accounts.
-
-- [LeetCode Stats API](https://leetcode-stats.tashif.codes/)
-- [Codeforces Stats API](https://codeforces-stats.tashif.codes/)
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [Architecture](#-architecture)
+- [Screenshots](#-screenshots)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [API Reference](#-api-reference)
+- [Cron Jobs](#-cron-jobs)
+- [Docker](#-docker)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [Team](#-team)
 
 ---
 
-## 🛠️ **Modern Tech Stack**
+## 🎯 About
 
-### **Frontend Excellence**
+**Notify** is a full-stack Progressive Web App built for competitive programmers who want to stay ahead of every contest across **CodeChef**, **Codeforces**, and **LeetCode** — all from a single, elegant dashboard.
 
-![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white)
+Notify solves the real frustration of:
+- Scattered contest schedules across multiple platforms
+- Forgetting to register for contests at the last minute
+- Having no single view for tracking your friends' performance
+
+With Notify, you get a personalized, notification-driven experience that keeps you focused on what matters — **solving problems, not missing contests**.
+
+---
+
+## ✨ Features
+
+### 🔔 Smart Notification System
+- **Email Reminders** — Receive alerts 30–60 minutes and 24 hours before a contest starts
+- **Browser Push Notifications** — Get notified even when the app isn't open (PWA-powered)
+- **One-click Unsubscribe** — Secure token-based unsubscribe from any email
+- **Customizable Per-Platform** — Toggle reminders for LeetCode, Codeforces, and CodeChef independently
+
+### 📊 Multi-Platform Contest Dashboard
+| Platform | Coverage |
+|----------|----------|
+| **LeetCode** | Weekly & Biweekly Contests |
+| **Codeforces** | Div 1, Div 2, Div 3, Educational, Global Rounds |
+| **CodeChef** | Long Challenges, Cook-offs, Starters |
+| **Coming Soon** | AtCoder, TopCoder, HackerRank |
+
+### 🕵️ Friend Stalker
+- Add friends by their platform handle (LeetCode / Codeforces)
+- Track their ratings, ranks, and contest history
+- Powered by [Tashif Khan's Stats APIs](https://github.com/Tashifkhan)
+
+### 🔐 Full Auth System
+- Email/password sign-up with **OTP-based email verification**
+- **Forgot password** flow with secure reset codes
+- JWT session management via **NextAuth**
+- Route protection via Next.js middleware
+
+### ⚡ PWA Superpowers
+- **Install on any device** — desktop or mobile, from any browser
+- **Offline-first** with service worker caching
+- **Native app feel** — no address bar, smooth transitions
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+![Next.js](https://img.shields.io/badge/-Next.js_15-000000?style=flat-square&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/-React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![TSX](https://img.shields.io/badge/-TSX-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+![Radix UI](https://img.shields.io/badge/-Radix_UI-161618?style=flat-square&logo=radix-ui&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/-shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)
 ![PWA](https://img.shields.io/badge/-PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
 
-### **Backend & Database**
-
+### Backend & Data
 ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Cron Job](https://img.shields.io/badge/-Cron%20Jobs-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![Mongoose](https://img.shields.io/badge/-Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white)
+![NextAuth](https://img.shields.io/badge/-NextAuth.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![Nodemailer](https://img.shields.io/badge/-Nodemailer-009DFF?style=flat-square&logo=gmail&logoColor=white)
+![React Email](https://img.shields.io/badge/-React_Email-000000?style=flat-square&logo=react&logoColor=white)
 
-### **Platform Integrations**
+### Forms & Validation
+![React Hook Form](https://img.shields.io/badge/-React_Hook_Form-EC5990?style=flat-square&logo=reacthookform&logoColor=white)
+![Zod](https://img.shields.io/badge/-Zod-3E67B1?style=flat-square&logo=zod&logoColor=white)
 
-![CodeChef](https://img.shields.io/badge/-CodeChef-5B4638?style=flat-square&logo=codechef&logoColor=white)
-![Codeforces](https://img.shields.io/badge/-Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)
-![LeetCode](https://img.shields.io/badge/-LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=white)
-
----
-
-## 🎮 **Features That Give You The Edge**
-
-### **🔔 Smart Contest Reminders**
-
-- Customizable notification timing (1 hour, 1 day before)
-- Multiple reminder types: browser notifications, email alerts
-- Contest difficulty and duration-based filtering
-- Time zone intelligent scheduling
-
-### **📊 Multi-Platform Integration**
-
-- **CodeChef** - Long challenges, Cook-offs, Lunchtime
-- **Codeforces** - Div 1, Div 2, Educational rounds
-- **LeetCode** - Weekly & Biweekly contests
-- **Coming Soon** - AtCoder, TopCoder, HackerRank, and more!
-
-### **⚡ PWA Superpowers**
-
-- Install directly from any browser
-- Works offline with cached data
-- Native app-like experience
-- Lightning-fast loading times
-- Cross-device synchronization
-
-### **🤖 Backend Intelligence**
-
-- **Automated Contest Fetching** - Cron jobs keep the data fresh
-- **Server Keep-Alive System** - 99.9% uptime guarantee
-- **Smart Caching** - Optimized performance
-- **Scalable Database** - MongoDB for reliable data storage
+### Dev & Infra
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Turbopack](https://img.shields.io/badge/-Turbopack-000000?style=flat-square&logo=next.js&logoColor=white)
 
 ---
 
-## 🚀 **Quick Start Guide**
+## 🏗️ Architecture
 
-### **Prerequisites**
-
-```bash
-✅ Node.js 18+
-✅ MongoDB instance
-✅ Modern web browser with PWA support
+```
+notify/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/              # Sign-in, Sign-up, Verify pages
+│   │   ├── (pages)/             # Protected: Dashboard, Contests, Settings, About
+│   │   │   ├── dashboard/
+│   │   │   ├── contests/
+│   │   │   ├── settings/
+│   │   │   └── guest-dashboard/
+│   │   ├── api/
+│   │   │   ├── auth/            # NextAuth [...nextauth] handler
+│   │   │   ├── sign-up/         # User registration + OTP dispatch
+│   │   │   ├── verify-code/     # OTP verification
+│   │   │   ├── forgot-pass/     # Password reset code dispatch
+│   │   │   ├── reset-pass/      # Password reset handler
+│   │   │   ├── get-contests/    # Fetch contests from DB
+│   │   │   ├── update-contest/  # [CRON] Sync contests from platforms
+│   │   │   ├── send-reminders/  # [CRON] Dispatch email/push reminders
+│   │   │   ├── set-reminder/    # User reminder preferences
+│   │   │   ├── get-reminders/   # Fetch user's active reminders
+│   │   │   ├── change-settings/ # Update notification preferences
+│   │   │   ├── add-friend/      # Add a platform friend
+│   │   │   ├── get-friends/     # Fetch friends list
+│   │   │   ├── remove-friend/   # Remove a friend
+│   │   │   ├── check-friend/    # Check if friend exists
+│   │   │   ├── check-username-unique/
+│   │   │   └── unsubscribe/     # Token-based email unsubscribe
+│   │   └── unsubscribed/        # Unsubscribe success/error pages
+│   ├── components/              # Reusable UI components
+│   │   ├── contest-card.tsx
+│   │   ├── friend-stalker.tsx
+│   │   ├── contest-filters.tsx
+│   │   └── ...
+│   ├── model/
+│   │   ├── User.ts              # User schema (auth, preferences, friends)
+│   │   ├── Contest.ts           # Contest schema
+│   │   └── Reminder.ts         # Reminder schema
+│   ├── helpers/
+│   │   └── sendVerificationEmail.ts
+│   ├── schemas/                 # Zod validation schemas
+│   ├── hooks/                   # Custom React hooks
+│   ├── context/                 # React context providers
+│   ├── types/                   # Shared TypeScript types
+│   └── middleware.ts            # Auth-based route protection
+├── emails/                      # React Email templates
+├── scripts/
+│   ├── send-announcement.mjs    # Bulk announcement mailer
+│   └── migrate-unsubscribe-tokens.mjs
+├── Dockerfile
+└── public/                      # Static assets + PWA manifest
 ```
 
-### **Installation & Setup**
+### Data Flow
 
-#### 1️⃣ **Clone Repository**
+```
+Browser → Next.js Middleware (JWT check)
+              ↓
+        Next.js API Routes
+              ↓
+        Mongoose → MongoDB Atlas
+              ↓
+    Nodemailer (Gmail SMTP) → User Inbox
+
+Cron Scheduler → /api/update-contest → Fetch platforms → Store in MongoDB
+Cron Scheduler → /api/send-reminders → Query upcoming contests → Send emails/push
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```
+✅ Node.js 18+
+✅ A MongoDB instance (Atlas free tier works great)
+✅ A Gmail account with an App Password
+✅ A modern browser with PWA support
+```
+
+### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/vansh1233/Notify
+git clone https://github.com/Himaanshuuuu04/Notify.git
 cd Notify
 ```
 
-#### 2️⃣ **Install Dependencies**
+### 2️⃣ Install dependencies
 
 ```bash
-# Using npm
+# npm (recommended)
 npm install
 
-# Using yarn (alternative)
-yarn install
+# or bun (faster)
+bun install
 ```
 
-#### 3️⃣ **Environment Setup**
+### 3️⃣ Set up environment variables
+
+Create a `.env.local` file in the project root:
 
 ```bash
-# Create .env.local in project root
-# (use your own values)
-MONGODB_URI=your_mongodb_connection_string
+# MongoDB
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/notify
+
+# NextAuth — generate with: openssl rand -base64 32
 NEXTAUTH_SECRET=your_strong_random_secret
-NODEMAILER_EMAIL=your_sender_email
-NODEMAILER_PASS=your_email_app_password
+NEXTAUTH_URL=http://localhost:3000
+
+# Nodemailer (Gmail)
+NODEMAILER_EMAIL=your_gmail_address@gmail.com
+NODEMAILER_PASS=your_gmail_app_password
 ```
 
-These are the core env vars currently used by the app:
+> **Note:** For `NODEMAILER_PASS`, create a [Google App Password](https://myaccount.google.com/apppasswords) — do not use your regular Gmail password.
+> Never commit `.env.local` to version control.
 
-- `MONGODB_URI`: MongoDB connection string used by database calls.
-- `NEXTAUTH_SECRET`: Secret used by NextAuth for signing/encryption.
-- `NODEMAILER_EMAIL`: Sender account used for verification/reset/reminder emails.
-- `NODEMAILER_PASS`: App password/token for the sender email account.
-
-> Keep `.env.local` out of git and never commit real credentials.
-
-#### 4️⃣ **Launch Development Server**
+### 4️⃣ Run the development server
 
 ```bash
 npm run dev
 ```
 
-#### 5️⃣ **Build for Production**
+Open [http://localhost:3000](http://localhost:3000) in your browser. The app uses **Turbopack** for fast HMR.
+
+### 5️⃣ Build for production
 
 ```bash
 npm run build
 npm start
 ```
 
-#### 6️⃣ **Run Tests**
+---
 
-```bash
-npm test
-```
+## 🔑 Environment Variables
+
+| Variable | Required | Description |
+|---|---|---|
+| `MONGODB_URI` | ✅ | MongoDB connection string |
+| `NEXTAUTH_SECRET` | ✅ | Secret for JWT signing & encryption |
+| `NEXTAUTH_URL` | ✅ | Canonical URL of your deployment |
+| `NODEMAILER_EMAIL` | ✅ | Gmail address used as the sender |
+| `NODEMAILER_PASS` | ✅ | Gmail App Password for the sender account |
 
 ---
 
-## ⏰ **Cron Job Context**
+## 📡 API Reference
 
-Notify uses two cron-hit APIs in production:
+All routes are under `/api/`. Protected routes require a valid NextAuth session.
 
-- `GET /api/update-contest`
-  - Fetches latest contests from platforms.
-  - Detects newly added contests.
-  - Sends contest detail emails for newly discovered contests.
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `POST` | `/api/sign-up` | Public | Register a new user & send OTP |
+| `POST` | `/api/verify-code` | Public | Verify email OTP |
+| `POST` | `/api/forgot-pass` | Public | Send password reset code |
+| `POST` | `/api/reset-pass` | Public | Reset password with code |
+| `GET` | `/api/get-contests` | 🔒 | Fetch contests from DB |
+| `GET` | `/api/update-contest` | Cron | Sync latest contests from platforms |
+| `GET` | `/api/send-reminders` | Cron | Send email/push reminders |
+| `POST` | `/api/set-reminder` | 🔒 | Set reminder for a contest |
+| `GET` | `/api/get-reminders` | 🔒 | Get user's active reminders |
+| `POST` | `/api/change-settings` | 🔒 | Update notification preferences |
+| `POST` | `/api/add-friend` | 🔒 | Add a friend by platform handle |
+| `GET` | `/api/get-friends` | 🔒 | Fetch friends list |
+| `DELETE` | `/api/remove-friend` | 🔒 | Remove a friend |
+| `GET` | `/api/check-username-unique` | Public | Check username availability |
+| `GET` | `/api/unsubscribe` | Token | Unsubscribe from email notifications |
 
-- `GET /api/send-reminders`
-  - Sends reminders for contests starting in the next 30-60 minutes.
-  - Sends one-day reminders for contests starting in the next 23h30m-24h.
+---
 
-### **Recommended Schedule**
+## ⏰ Cron Jobs
 
-- `/api/send-reminders`: every 30 minutes (`*/30 * * * *`)
-- `/api/update-contest`: every 6 hours (`0 */6 * * *`)
+Notify uses two automated API endpoints that should be hit on a schedule:
 
-### **Example (Vercel `vercel.json`)**
+### `/api/update-contest` — Contest Sync
+- Fetches latest contests from CodeChef, Codeforces, and LeetCode
+- Detects newly added contests
+- Dispatches contest announcement emails to subscribed users
+- **Recommended schedule:** Every 6 hours — `0 */6 * * *`
+
+### `/api/send-reminders` — Reminder Dispatch
+- Sends reminders for contests starting in the **next 30–60 minutes**
+- Sends 24-hour advance reminders for contests starting in **23h30m–24h**
+- **Recommended schedule:** Every 30 minutes — `*/30 * * * *`
+
+### Vercel Cron (vercel.json)
 
 ```json
 {
   "crons": [
     { "path": "/api/send-reminders", "schedule": "*/30 * * * *" },
-    { "path": "/api/update-contest", "schedule": "0 */6 * * *" }
+    { "path": "/api/update-contest",  "schedule": "0 */6 * * *"  }
   ]
 }
 ```
 
-If you are using another scheduler (GitHub Actions, Cron-job.org, UptimeRobot, etc.), simply send a GET request to:
+### Other Schedulers
 
-- `https://your-domain.com/api/send-reminders`
-- `https://your-domain.com/api/update-contest`
-
----
-
-## 🏆 **Production Features**
-
-### **🎨 CP-Optimized UI/UX**
-
-- Contest cards with difficulty indicators
-- Color-coded platform identification
-- Quick contest registration links
-- Responsive design for all devices
-
-### **🔧 Developer Experience**
-
-- Full TypeScript implementation
-- Component-based architecture
-- Comprehensive error handling
-- Detailed logging and monitoring
-
-### **⚡ Performance Optimized**
-
-- Server-side rendering with Next.js
-- Image optimization and lazy loading
-- Efficient database queries
-- CDN-ready deployment
+Any HTTP GET to these endpoints will trigger the job. Works with:
+- **GitHub Actions** scheduled workflows
+- **Cron-job.org** (free tier available)
+- **UptimeRobot** monitor pings
+- **EasyCron**, **Render Cron Jobs**, etc.
 
 ---
 
-## 📊 **Impact & Metrics**
+## 🐳 Docker
 
-| Feature                   | Achievement                         |
-| ------------------------- | ----------------------------------- |
-| **Contest Coverage**      | 3+ major platforms integrated       |
-| **Response Time**         | <200ms average API response         |
-| **PWA Score**             | 95+ Lighthouse PWA score            |
-| **Notification Accuracy** | 99.8% on-time delivery              |
-| **User Engagement**       | 85% daily active usage rate         |
-| **Offline Capability**    | Full functionality without internet |
+Run Notify without installing Node.js locally.
 
----
+### Prerequisites
+- [Docker](https://www.docker.com/get-started) installed
 
-## 🔮 **Roadmap & Future Enhancements**
+### 1️⃣ Prepare environment
 
-### **Phase 1 (Current)**
+Create a `.env` file in the project root with your secrets (see [Environment Variables](#-environment-variables)).
 
-- ✅ CodeChef, Codeforces, LeetCode integration
-- ✅ PWA implementation
-- ✅ Cron job automation
-- ✅ MongoDB data persistence
-
-### **Phase 2 (Coming Soon)**
-
-- 🔄 AtCoder & TopCoder integration
-- 🔄 Contest performance analytics
-- 🔄 Social features (friend notifications)
-- 🔄 Mobile app (React Native)
-
-### **Phase 3 (Future)**
-
-- 🎯 AI-powered contest recommendations
-- 🎯 Team contest coordination
-- 🎯 Live contest tracking dashboard
-- 🎯 Integration with coding IDEs
-
----
-
-## 🤝 **Connect & Collaborate**
-
-### **Open Source Contributions Welcome!**
-
-- 💡 Feature suggestions and improvements
-- 🐛 Bug reports and fixes
-- 🌐 New platform integrations
-- 📖 Documentation enhancements
-
-### **Professional Network**
-
-- 💼 **Available for full-stack opportunities**
-- 🚀 **Open to competitive programming collaborations**
-- 🌟 **Seeking innovative tech projects**
-
-### **Let's Connect**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/shaurya-rahlon)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vansh1233)
-[![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Shaurya003)
-
----
-
-## 📈 **Technical Skills Demonstrated**
-
-This project showcases expertise in:
-
-- **Next.js & React** ecosystem mastery
-- **TypeScript/TSX** for type-safe development
-- **PWA development** and optimization
-- **MongoDB** database design and management
-- **Cron job** automation and scheduling
-- **API integration** from multiple platforms
-- **Performance tuning** and optimization
-- **Modern deployment** strategies
-
----
-
-## 🎯 **For Hiring Managers**
-
-**Why This Project Shows I'm Ready:**
-
-- ✅ **Real-world problem solving** for a specific community
-- ✅ **Modern tech stack** implementation
-- ✅ **Production-ready features** with 99.9% uptime
-- ✅ **Scalable architecture** design
-- ✅ **User-focused development** approach
-- ✅ **Continuous improvement** mindset
-
----
-
-### 💡 **"Helping competitive programmers focus on what matters most - solving problems, not missing contests."**
-
-**⭐ Star this repository if you're a fellow CP enthusiast or appreciate clean, scalable code!**
-
----
-
-_Built with 💻 by [Vansh](https://github.com/vansh1293), [Himanshu](https://github.com/Himaanshuuuu04), and [Shaurya](https://github.com/ShauryaRahlon) — competitive programming enthusiasts who understand the pain of missed contests._
-
----
-
-## 🏃‍♂️ **Try It Now!**
-
-**[🚀 Live Demo](https://notify-snowy.vercel.app/)** | **[📱 Install PWA](https://notify-snowy.vercel.app/sign-in)**
-
-_Available on all devices - just visit the link and click "Add to Home Screen"_
-
----
-
-## 🐳 Docker because why not
-
-You can run Notify using Docker if you dont wanna go in burden of installing node.js.
-
-### **Prerequisites**
-
-- [Docker](https://www.docker.com/get-started) installed on your system
-
-### **1️⃣ Prepare Environment Variables**
-
-Create a `.env` file in the project root and fill in the required values:
+### 2️⃣ Build the image
 
 ```bash
-MONGODB_URI=your_mongodb_connection_string
-NEXTAUTH_SECRET=your_strong_random_secret
-NODEMAILER_EMAIL=your_sender_email
-NODEMAILER_PASS=your_email_app_password
+docker build -t notify-app .
 ```
 
-### **2️⃣ Build the Docker Image**
-
-```bash
-docker build . -t notify-app .
-```
-
-### **3️⃣ Run the Docker Container**
+### 3️⃣ Run the container
 
 ```bash
 docker run -p 3000:3000 --env-file .env notify-app
 ```
 
-- The app will be available at [http://localhost:3000](http://localhost:3000)
-- You can override environment variables at runtime using `-e VAR_NAME=value` if needed.
+App will be available at [http://localhost:3000](http://localhost:3000).
 
-### **4️⃣ (Optional) Docker Compose**
-
-For a more complete development setup, create a `docker-compose.yml` file:
+### 4️⃣ Docker Compose (optional)
 
 ```yaml
 version: "3.8"
@@ -395,8 +366,104 @@ services:
     restart: unless-stopped
 ```
 
-Then run with:
-
 ```bash
 docker-compose up -d
 ```
+
+---
+
+## 🔮 Roadmap
+
+### ✅ Phase 1 — Current
+- [x] CodeChef, Codeforces, LeetCode integration
+- [x] OTP-based email verification
+- [x] Email & browser push notifications
+- [x] Friend stalker (LeetCode + Codeforces)
+- [x] PWA with offline support
+- [x] Cron job automation
+- [x] Docker support
+- [x] Secure token-based unsubscribe
+
+### 🔄 Phase 2 — In Progress
+- [ ] AtCoder & TopCoder integration
+- [ ] Contest performance analytics
+- [ ] Social features — follow friends, share results
+
+### 🎯 Phase 3 — Future
+- [ ] AI-powered contest recommendations
+- [ ] Mobile app (React Native)
+- [ ] Team contest coordination
+- [ ] Live contest tracking dashboard
+- [ ] IDE plugin integrations
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place. Any contributions you make are **greatly appreciated**.
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feat/amazing-feature`
+3. Commit your changes: `git commit -m 'feat: add some amazing feature'`
+4. Push to the branch: `git push origin feat/amazing-feature`
+5. Open a Pull Request
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+
+### Areas We'd Love Help With
+- 🌐 New platform integrations (AtCoder, TopCoder, HackerRank)
+- 🐛 Bug reports and fixes
+- 📖 Documentation improvements
+- 🎨 UI/UX enhancements
+- 🧪 Tests
+
+---
+
+## 🙏 Special Thanks
+
+A huge shoutout to [**Tashif Khan**](https://github.com/Tashifkhan) for generously providing the APIs that power contest data fetching and friend stalking features:
+
+- [LeetCode Stats API](https://leetcode-stats.tashif.codes/)
+- [Codeforces Stats API](https://codeforces-stats.tashif.codes/)
+
+---
+
+## 👥 Team
+
+Built with 💻 by three competitive programmers who got tired of missing contests:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/vansh1233">
+        <img src="https://github.com/vansh1233.png" width="80px;" alt="Vansh"/><br/>
+        <sub><b>Vansh</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Himaanshuuuu04">
+        <img src="https://github.com/Himaanshuuuu04.png" width="80px;" alt="Himanshu"/><br/>
+        <sub><b>Himanshu</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ShauryaRahlon">
+        <img src="https://github.com/ShauryaRahlon.png" width="80px;" alt="Shaurya"/><br/>
+        <sub><b>Shaurya</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if Notify saves you from missing a contest!**
+
+[![GitHub stars](https://img.shields.io/github/stars/Himaanshuuuu04/Notify?style=social)](https://github.com/Himaanshuuuu04/Notify/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Himaanshuuuu04/Notify?style=social)](https://github.com/Himaanshuuuu04/Notify/network/members)
+
+_Helping competitive programmers focus on what matters most — solving problems, not missing contests._
+
+</div>
