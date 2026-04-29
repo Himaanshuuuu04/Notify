@@ -8,6 +8,13 @@ import Link from "next/link";
 const testimonials = [
   {
     quote:
+      "Designing and developing Notify's interface was all about making contest tracking effortless and beautiful. It's built by CPers, for CPers!",
+    name: "Himanshu Singh",
+    designation: "Full Stack Developer and UI/UX Designer at Notify",
+    src: "/Himanshu.jpg",
+  },
+  {
+    quote:
       "Notify is more than just a project—it's a mission to help every competitive programmer stay ahead. Building the backend for this platform has been a rewarding journey!",
     name: "Shaurya Rahlon",
     designation: "Backend Developer at Notify",
@@ -20,13 +27,7 @@ const testimonials = [
     designation: "Full Stack Developer at Notify",
     src: "/vansh.jpg",
   },
-  {
-    quote:
-      "Designing and developing Notify's interface was all about making contest tracking effortless and beautiful. It's built by CPers, for CPers!",
-    name: "Himanshu Singh",
-    designation: "Full Stack Developer and UI/UX Designer at Notify",
-    src: "/Himanshu.jpg",
-  },
+  
 ];
 export default function AboutPage() {
   return (
